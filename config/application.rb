@@ -8,6 +8,10 @@ Bundler.require(*Rails.groups)
 
 module BlogpostProject
   class Application < Rails::Application
+    config.middleware.use OmniAuth::Builder do
+      provider :instagram, 'YOUR_CLIENT_ID', 'YOUR_CLIENT_SECRET'
+      # Add other providers if needed
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 

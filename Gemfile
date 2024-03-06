@@ -30,6 +30,8 @@ gem "jbuilder"
 
 gem "byebug"
 
+gem 'omniauth-instagram'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

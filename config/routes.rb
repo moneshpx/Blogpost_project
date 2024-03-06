@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: redirect('/')
   resources :posts
   resources :socials
 end
