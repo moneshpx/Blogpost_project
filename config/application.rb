@@ -23,5 +23,11 @@ module BlogpostProject
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Add OmniAuth provider configurations here
+    config.middleware.use OmniAuth::Builder do
+      provider :facebook, '1048878389513286', '6687d83db7fca4fac482830a850ebb0f'
+      # provider :instagram, 'YOUR_INSTAGRAM_CLIENT_ID', 'YOUR_INSTAGRAM_CLIENT_SECRET'
+      # Add more providers if needed
+    end
   end
 end
